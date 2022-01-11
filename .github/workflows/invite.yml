@@ -1,7 +1,7 @@
 name: Ivite Organization
 on:
-  issues:
-    types: [opened]
+  push:
+    branches: main
 jobs:
   invite:
     runs-on: ubuntu-latest
