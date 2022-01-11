@@ -1,0 +1,16 @@
+name: Ivite Organization
+on:
+  issues:
+    types: [opened]
+jobs:
+  invite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite to the organization
+        uses: lekterable/inclusive-organization-action@v1.1.0
+        with:
+          organization: CPians
+          team: Members
+          comment: Welcome
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
